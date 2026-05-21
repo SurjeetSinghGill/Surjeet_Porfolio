@@ -175,7 +175,6 @@ https://ssgill.in
 
 # 📷 Project Preview
 
-> Add screenshots here:
 
 * Homepage
 * Terminal Interface
