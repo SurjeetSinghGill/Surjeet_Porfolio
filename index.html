@@ -1,0 +1,466 @@
+<!--
+    File: index.html
+    Purpose: Developer portfolio main page
+    Signed by: serozr
+    Date: 2025-10-16
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08141a">
+    <title>Surjeet Singh Gill | Developer Portfolio</title>
+    <meta name="description" content="Portfolio and resume for Surjeet Singh Gill">
+    <meta name="author" content="Surjeet Singh Gill">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/github-dark.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+</head>
+<body>
+    <!-- Terminal Boot Screen - signed: serozr -->
+    <div id="bootScreen" class="boot-screen">
+        <div class="boot-content">
+            <div class="boot-header">
+                <pre class="ascii-art">
+ ____  _____ _   _ _____ _     ___  ____  _____ ____  
+|  _ \| ____| | | | ____| |   / _ \|  _ \| ____|  _ \ 
+| | | |  _| | | | |  _| | |  | | | | |_) |  _| | |_) |
+| |_| | |___| |_| | |___| |__| |_| |  __/| |___|  _ < 
+|____/|_____|\___/|_____|_____\___/|_|   |_____|_| \_\
+                </pre>
+            </div>
+            <div class="boot-terminal">
+                <p><span class="boot-prompt">[SYSTEM]</span> <span class="boot-text">Initializing system...</span></p>
+                <p><span class="boot-prompt">[BOOT]</span> <span class="boot-text">Loading core modules</span> <span class="boot-dots"></span></p>
+                <p><span class="boot-prompt">[INIT]</span> <span class="boot-text">Mounting file systems</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[LOAD]</span> <span class="boot-text">Starting network services</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[EXEC]</span> <span class="boot-text">Loading portfolio.sh</span> <span class="boot-dots"></span></p>
+                <p><span class="boot-prompt">[INIT]</span> <span class="boot-text">Initializing user interface</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[DONE]</span> <span class="boot-text">System ready</span> <span class="boot-status boot-ready">[READY]</span></p>
+            </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <p class="boot-footer">Press any key to continue... <span class="boot-sign">— serozr</span></p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">&gt;_developer.sh</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#skills" onclick="closeMenu()">Skills</a>
+                <a href="#experience" onclick="closeMenu()">Experience</a>
+                <a href="#training" onclick="closeMenu()">Training</a>
+                <a href="#schooling" onclick="closeMenu()">Schooling</a>
+                <a href="#certifications" onclick="closeMenu()">Certifications</a>
+                <a href="#projects" onclick="closeMenu()">Projects</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <div class="tag">// computer science & engineering student</div>
+            <h1 class="animated-gradient-text">SURJEET SINGH GILL</h1>
+            <p class="subtitle">Software, cloud, and systems focused portfolio</p>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-text terminal-console" id="terminalConsole">
+                    <p class="output">Welcome to Surjeet Singh Gill's terminal.</p>
+                    <p class="output">Type <span class="prompt">help</span>, <span class="prompt">about</span>, or <span class="prompt">certification</span>.</p>
+                    <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+                    <div class="terminal-input-row">
+                        <span class="prompt terminal-prompt">$</span>
+                        <input id="terminalInput" class="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="Type a command and press Enter">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <!-- Quick sign -->
+                <span class="cta-sign">signed: Surjeet Singh Gill</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Hi! I'm <span class="highlight">Surjeet Singh Gill</span>, a Computer Science and Engineering student 
+                        focused on building practical software, cloud, and systems projects. <span class="about-sign">— Surjeet Singh Gill</span>
+                    </p>
+                    <p>
+                        I work across programming systems, REST APIs, cloud infrastructure, databases, and AI-driven problem solving. 
+                        My focus is on technical leadership, analytical problem-solving, and system design thinking.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">CSE</div>
+                            <div class="stat-label">Lovely Professional University</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">RHEL</div>
+                            <div class="stat-label">RH124 & RH134 Training</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">AI</div>
+                            <div class="stat-label">Search & Decision Systems</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dot dot-red"></div>
+                            <div class="code-dot dot-yellow"></div>
+                            <div class="code-dot dot-green"></div>
+                            <span class="code-title">about.js</span>
+                        </div>
+                        <div class="code-content">
+<pre><code class="language-json">{
+    "name": "Surjeet Singh Gill",
+    "role": "Computer Science and Engineering Student",
+    "location": "Punjab, India",
+    "interests": [
+        "Programming & Systems",
+        "Cloud Infrastructure",
+        "AI Search Strategies",
+        "Blockchain"
+    ],
+    "currentlyLearning": [
+        "Distributed Systems",
+        "Spring Boot"
+    ],
+    "funFact": "I like turning algorithms into practical systems"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3>Programming & Systems</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>C, C++, Python, Rust, Swift, Bash</span>
+                        <span>Core</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in" style="animation-delay: 0.1s;">
+                <h3>Backend & APIs</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Spring Boot, RESTful API design, Postman</span>
+                        <span>Core</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in" style="animation-delay: 0.2s;">
+                <h3>Cloud & Infrastructure</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>AWS, Docker, Git, GitHub</span>
+                        <span>Core</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in" style="animation-delay: 0.3s;">
+                <h3>Databases and Foundations</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>MySQL, DSA, Distributed Systems</span>
+                        <span>Core</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Projects</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Password Audit & Hash Cracking</h3>
+                    <div class="timeline-date">May 2026</div>
+                    <p class="timeline-description">
+                        A cybersecurity audit project simulating a post-breach enterprise password breach environment using Kali Linux, Python automation, Hashcat, and John the Ripper.
+                        Tested MD5, SHA1, SHA256, and NTLM hashes while auditing weak credentials and password policy gaps.
+                    </p>
+                    <p class="timeline-description">
+                        Achieved a 75% crack rate, exposed weak password patterns, and delivered SOC-style audit recommendations for stronger password policies.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Autonomous Vehicle Threat Detection & Control Intelligence Platform</h3>
+                    <div class="timeline-date">Since Aug 2025</div>
+                    <p class="timeline-description">
+                        Designed a real-time automotive threat detection system that monitors vehicular control signals and flags anomalous behavior using AI-driven pattern analysis.
+                        Built an adaptive vehicle intelligence layer that dynamically optimizes drivetrain response based on behavioral telemetry and operational context.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Vision-Driven Highway Transaction Automation System</h3>
+                    <div class="timeline-date">Nov 2025 - Dec 2025</div>
+                    <p class="timeline-description">
+                        Engineered a fully automated highway transaction pipeline using computer vision and backend orchestration, eliminating physical tags and manual checkpoints.
+                        Designed the system for high-throughput, low-latency execution, suitable for nation-scale traffic infrastructure deployment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.2s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Search Strategy Optimization & Decision Intelligence Engine</h3>
+                    <div class="timeline-date">Jan 2025 - Feb 2025</div>
+                    <p class="timeline-description">
+                        Developed a search algorithm evaluation framework to analyze efficiency, optimality, and computational cost across classical AI strategies.
+                        Implemented a decision optimization engine demonstrating how algorithmic choice impacts real-world systems like routing, planning, and scheduling.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training">
+        <h2>Training</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Red Hat Enterprise Linux (RHEL) Training | Red Hat Academy, LPU</h3>
+                    <div class="timeline-date">Jun 2025 - Jul 2025</div>
+                    <p class="timeline-description">
+                        Achieved RH124 & RH134 certifications, gaining hands-on expertise in Linux system administration and security hardening.
+                        Practiced Bash scripting, user & process management, and enterprise-level troubleshooting under Red Hat Academy.
+                        Training aligned with industry-recognized RHCSA standards, strengthening skills for real-world IT environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schooling">
+        <h2>Schooling</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Lovely Professional University</h3>
+                    <div class="timeline-date">Punjab, India | Since Aug 2023</div>
+                    <p class="timeline-description">
+                        Bachelor of Technology – Computer Science and Engineering.
+                        Current academic focus on software engineering, systems, and cloud infrastructure.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.2s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Vashist Public School</h3>
+                    <div class="timeline-date">Una, Himachal Pradesh | Apr 2020 - Mar 2022</div>
+                    <p class="timeline-description">
+                        Intermediate – PCM.
+                        Percentage: 86.00.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+            <div class="cert-card fade-in">
+                <div class="cert-icon">🌐</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Networking</div>
+                        <div class="cert-issuer">CompTIA</div>
+                    </div>
+                </div>
+                <h3>CompTIA Network+ (N10-009)</h3>
+                <p class="cert-description">
+                    Jan 2025.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">Jan 2025</span>
+                    <span class="cert-badge-text">CompTIA</span>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.1s;">
+                <div class="cert-icon">☁️</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Cloud AI</div>
+                        <div class="cert-issuer">Oracle</div>
+                    </div>
+                </div>
+                <h3>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</h3>
+                <p class="cert-description">
+                    Jul 2024.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">Jul 2024</span>
+                    <span class="cert-badge-text">Oracle</span>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.2s;">
+                <div class="cert-icon">☁️</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Cloud Architect</div>
+                        <div class="cert-issuer">AWS</div>
+                    </div>
+                </div>
+                <h3>AWS Certified Solutions Architect – Associate</h3>
+                <p class="cert-description">
+                    April 2026.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">Apr 2026</span>
+                    <span class="cert-badge-text">AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Achievements</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card fade-in" style="animation-delay: 0.1s;">
+                <h3>Campus Ambassador</h3>
+                <p>Launched Global — represented the organization and drove on-campus outreach.</p>
+            </div>
+            
+            <div class="project-card fade-in" style="animation-delay: 0.2s;">
+                <h3>Management Lead</h3>
+                <p>LPU DSO Club — led execution of multiple student and technical events.</p>
+            </div>
+            
+            <div class="project-card fade-in" style="animation-delay: 0.3s;">
+                <h3>Academic Focus</h3>
+                <p>Computer Science and Engineering with practical work in software, cloud, and systems engineering.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-grid">
+                <a class="contact-item fade-in" href="https://github.com/SurjeetSinghGill" target="_blank" rel="noreferrer">
+                    <div class="contact-icon">💼</div>
+                    <h3>GitHub</h3>
+                    <p>github.com/SurjeetSinghGill</p>
+                </a>
+
+                <a class="contact-item fade-in" href="https://www.linkedin.com/in/surjeetgill/" target="_blank" rel="noreferrer" style="animation-delay: 0.1s;">
+                    <div class="contact-icon">🔗</div>
+                    <h3>LinkedIn</h3>
+                    <p>www.linkedin.com/in/surjeetgill/</p>
+                </a>
+            </div>
+
+            <div class="contact-form fade-in">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>$ name --input</label>
+                        <input type="text" name="user_name" placeholder="Surjeet Singh Gill" required>
+                        <small class="field-sign">Signed by Surjeet Singh Gill</small>
+                    </div>
+                    <div class="form-group">
+                        <label>$ email --input</label>
+                        <input type="email" name="user_email" placeholder="sunnysgs.04@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>$ message --input</label>
+                        <textarea name="message" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <p id="contactFormStatus" class="form-status" aria-live="polite"></p>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2025 <span class="signature">Surjeet Singh Gill</span>. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Made with ❤️ using HTML, CSS & JavaScript</p>
+        <p style="margin-top: 0.25rem; font-size: 0.8rem; color: #bbb;">Site signed and maintained by <strong>Surjeet Singh Gill</strong></p>
+    </footer>
+
+
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script async src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script async src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.hljs) {
+                hljs.highlightAll();
+            }
+        });
+    </script>
+    <script defer src="src/js/main.js"></script>
+</body>
+</html>
+
+<!-- End of file - signed: serozr -->
